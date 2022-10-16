@@ -84,7 +84,7 @@ dns-family.adguard.com
 
 **AdGuard DNS nhưng không lọc gì cả**
 ```
-4.140.14.140
+94.140.14.140
 ```
 
 ```
