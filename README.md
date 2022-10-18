@@ -25,17 +25,58 @@ Khi sử dụng AdGuard DNS để chặn quảng cáo, trình duyệt và ứng 
 - Không thể chặn tất cả các trang web quảng cáo
 - Có rất nhiều website yêu cầu tắt trình chặn quảng cáo để tiếp tục truy cập
 - Để lại rất nhiều khoảng trống trên website khiến giao diện website đôi khi - khá kỳ quặc (nhưng không ảnh hưởng cho lắm).
-- Bạn chỉ có thể chọn 1 trong 2 VPN hoặc DNS nếu sử dụng phiên bản miễn phí khi
-- kết nối. Nếu muốn sử dụng cả 2, bạn sẽ phải mua AdGuard VPN.
+- Bạn chỉ có thể chọn 1 trong 2 VPN hoặc DNS nếu sử dụng phiên bản miễn phí khi kết nối.
+- Nếu muốn sử dụng cả 2, bạn sẽ phải mua AdGuard VPN.
 
 # Cách cài đặt AdGuard DNS trên Android và Windows 10
+## Cách cài đặt IP wifi AdGuard DNS trên Android
+
+![](https://raw.githubusercontent.com/dieenx/AdGuard-DNS/main/png/PicsArt-1.png)
+
+**Bước 1**: truy cập vào **wifi** => và tìm đến **Thông tin mạng**
+<br>
+**Bước 2**: truy cập vào **Thông tin mạng** => và tìm đến **Cài đặt IP**
+<br>
+**Bước 3**: Bạn chỉnh **IP DHCP** =>  **IP Tĩnh**
+<br>
+**Bước 4**: Sửa **DNS1** và  **DNS2**
+- bạn chọn 1 trong 3 cặp địa chỉ dưới đây và điền vào: **DNS1** và **DNS2** nhé!
+
+**AdGuard DNS thông thường**
+```
+94.140.14.14
+```
+
+```
+94.140.15.15
+```
+
+**AdGuard DNS nhưng không lọc gì cả**
+```
+94.140.14.140
+```
+
+```
+94.140.14.141
+```
+
+**AdGuard DNS gia đình**
+```
+94.140.14.15
+```
+
+```
+94.140.15.16
+```
+
+**Bước 5**: Lưu lại.
 ## Cách cài đặt AdGuard DNS trên Android
 **Bước 1**: truy cập vào **Cài đăt** => và tìm đến **Kết nối & chia sẻ** hoặc **Wi-Fi & Internet** tùy theo từng thiết bị.(tip: bạn tìm kiếm DNS là ra :v)
 <br>
 **Bước 2**: bạn tiếp tục nhấn vào **DNS cái nhân** DNS để mở chỗ thay đổi DNS.
 <br>
 
-![](https://raw.githubusercontent.com/dieenx/AdGuard-DNS/main/png/PicsArt.png)
+![](https://raw.githubusercontent.com/dieenx/AdGuard-DNS/main/png/PicsArt-2.png)
 
 <br>
 
@@ -138,4 +179,6 @@ dns-family.adguard.com
 
 **Bước 7**: bạn nhấn **OK** để lưu lại và **Close** để đóng toàn bộ mọi thứ. Lúc này, bạn có thể tùy chọn **khởi động lại thiết bị** hoặc tiếp tục sử dụng như thông thường với ít quảng cáo nhất có thể.
 <br>
-Nếu bạn muốn tham khảo cách thực hiện trên iOS và macOS, bài viết hướng dẫn của [AdGuard DNS](https://adguard-dns.io/en/public-dns.html) sẽ giúp bạn nhiều đấy!
+##
+- Nếu bạn muốn tham khảo cách thực hiện trên iOS và macOS, bài viết hướng dẫn của [AdGuard DNS](https://adguard-dns.io/en/public-dns.html)
+- Ngoài ra còn cài DNS cho Router Wifi, để chặn nhiều thiết bị
