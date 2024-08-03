@@ -20,9 +20,9 @@ Hướng dẫn sơ bộ
   ```
   cd c:\office
   ```
-  Setup.exe /configure configuration.xml
+  
   ```
-  cd c:\office
+  Setup.exe /configure configuration.xml
   ```
   ![Untitled](https://github.com/user-attachments/assets/dfe69ebe-4522-4df6-b017-4d2f27d89d08)
   ![Untitled](https://github.com/user-attachments/assets/1899edac-46fc-45cf-b01b-096926e7cb05)
