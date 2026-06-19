@@ -1,32 +1,122 @@
-- [OfficeSetup.exe](https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365ProPlusRetail&platform=Def&language=en-us&TaxRegion=pr&correlationId=a98f2420-8b66-4259-ba9e-90eeaeb8088a&token=0009fccd-aea5-45c4-ba67-5fc257a73f11&version=O16GA&source=O15OLSO365&Br=2)
+[![MAS](https://img.shields.io/badge/MAS-MicrosoftActivationScripts-blue)](https://github.com/massgravel/Microsoft-Activation-Scripts)
 
-- [Download Office Customization Tools](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
+# Office Install
 
-- [Download Office Deployment Tool](https://config.office.com/deploymentsettings)
-# office-install
-## Cài qua Deployment Tool
-Hướng dẫn sơ bộ
-- bước 1: Tạo file cấu hình và xuất file sẽ được file configuration.xml ở [officedeploymenttool_17531-20046.exe](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
-  ![Annotation](https://github.com/user-attachments/assets/b4604042-103b-47a1-8151-d0d91b3d9fc8)
->giải nén ra ta được file này
-  ![Annotation](https://github.com/user-attachments/assets/abad4a34-cd70-4472-9095-944179514036)
+Cài đặt Microsoft Office bằng **Office Deployment Tool (ODT)** và file cấu hình XML.
 
-- bước 2: Tạo 1 folder ở ổ c: và copy configuration.xml & OfficeSetup.exe vào folder
-  ![Annotation](https://github.com/user-attachments/assets/b9496cd0-648f-4cb4-b912-415fd8dee0ec)
-  và cho 2 file kia lên rồi
-  ![Annotation](https://github.com/user-attachments/assets/2b3c69fc-d36c-4401-84d6-cfeaaa1add9e)
-  
-- bước 3: mở CMD lên với quyền admin (vd tao để ổ C và đặt tên là office)
-  ```
-  cd c:\office
-  ```
-  
-  ```
-  Setup.exe /configure configuration.xml
-  ```
-  ![Untitled](https://github.com/user-attachments/assets/dfe69ebe-4522-4df6-b017-4d2f27d89d08)
-  ![Untitled](https://github.com/user-attachments/assets/1899edac-46fc-45cf-b01b-096926e7cb05)
-  ![Untitled](https://github.com/user-attachments/assets/0e9b7b70-e43a-4f29-be9e-b4c7d1ae0716)
+## Yêu cầu
 
+* Windows 10 hoặc Windows 11
+* Quyền Administrator
+* Kết nối Internet ổn định
 
-## Còn key thì dùng [MAS](https://github.com/massgravel/Microsoft-Activation-Scripts)
+## Công cụ
+
+* **Office Deployment Tool (ODT):** https://www.microsoft.com/download/details.aspx?id=49117
+* **Office Customization Tool (OCT):** https://config.office.com/deploymentsettings
+* [OfficeSetup.exe](https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=O365ProPlusRetail&platform=Def&language=en-us&TaxRegion=pr&correlationId=a98f2420-8b66-4259-ba9e-90eeaeb8088a&token=0009fccd-aea5-45c4-ba67-5fc257a73f11&version=O16GA&source=O15OLSO365&Br=2)
+> ví dụ: seting English (United States) và chỉ cài Word, PowerPoint, Excel
+
+`Configuration.xml`
+```xml
+<Configuration ID="2ec7c48a-fe53-4c9a-ab07-bd9f63ff1433">
+  <Add OfficeClientEdition="64" Channel="Current">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="en-us" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+  </Add>
+  <Updates Enabled="TRUE" />
+  <RemoveMSI />
+</Configuration>
+```
+
+## Hướng dẫn
+
+### Bước 1: Tải Office Deployment Tool
+
+1. Truy cập liên kết tải ODT.
+2. Tải xuống và chạy tệp cài đặt.
+3. Chọn thư mục giải nén, ví dụ:
+
+```text
+C:\Office
+```
+
+Sau khi giải nén, thư mục sẽ chứa tệp:
+
+```text
+setup.exe
+```
+
+---
+
+### Bước 2: Tạo file cấu hình
+
+1. Truy cập Office Customization Tool.
+2. Chọn phiên bản Office, ngôn ngữ và các ứng dụng cần cài đặt.
+3. Chọn **Export** để tải file cấu hình.
+4. Lưu file với tên:
+
+```text
+configuration.xml
+```
+
+5. Sao chép file vào thư mục `C:\Office`.
+
+Cấu trúc thư mục:
+
+```text
+C:\Office
+├── setup.exe
+└── configuration.xml
+```
+
+---
+
+### Bước 3: Cài đặt Office
+
+1. Mở **Command Prompt** với quyền Administrator.
+2. Chạy các lệnh sau:
+
+```cmd
+cd C:\Office
+setup.exe /configure configuration.xml
+```
+
+Office sẽ tự động tải xuống và cài đặt theo cấu hình đã chọn.
+
+> Thời gian cài đặt phụ thuộc vào tốc độ mạng và cấu hình máy tính.
+
+---
+
+### Tùy chọn: Tải bộ cài trước
+
+Nếu muốn cài đặt ngoại tuyến hoặc sử dụng cho nhiều máy tính, chạy lệnh:
+
+```cmd
+setup.exe /download configuration.xml
+```
+
+Sau khi tải xong, cài đặt bằng lệnh:
+
+```cmd
+setup.exe /configure configuration.xml
+```
+
+## Lưu ý
+
+* Nên gỡ bỏ các phiên bản Office cũ trước khi cài đặt.
+* Đảm bảo không đổi tên tệp `setup.exe` và `configuration.xml`.
+* Nếu quá trình cài đặt không bắt đầu, hãy kiểm tra lại nội dung file cấu hình và kết nối Internet.
+
+## Tài liệu tham khảo
+1. Office Deployment Tool: https://learn.microsoft.com/deployoffice/overview-office-deployment-tool
+2. Office Customization Tool: https://config.office.com/
+3. Microsoft 365: https://www.microsoft.com/microsoft-365
