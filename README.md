@@ -59,6 +59,21 @@ OfficeSetup.exe /configure configuration.xml
 Office sẽ tự động tải xuống và cài đặt theo cấu hình đã chọn.
 
 > Thời gian cài đặt phụ thuộc vào tốc độ mạng và cấu hình máy tính.
+<br>
+
+Nếu không tìm thấy ứng dụng cài thử Tìm trực tiếp trong thư mục cài đặt gốc
+
+Nếu lệnh Run ở trên không hoạt động, bạn vào thẳng đường dẫn cài đặt của Office để kiểm tra:
+
+Mở File Explorer và truy cập theo đường dẫn:
+
+`C:\Program Files\Microsoft Office\root\Office16`
+
+Kéo xuống dưới tìm các file thực thi có tên:
+
+1. WINWORD.EXE (Microsoft Word)
+2. EXCEL.EXE (Microsoft Excel)
+3. POWERPNT.EXE (Microsoft PowerPoint)
 
 ---
 
